@@ -1,0 +1,12 @@
+!**/.gitkeep
+.git
+.DS_Store
+build
+!build/.gitkeep
+deps
+!deps/.gitkeep
+tools/.current
+log.txt
+GENERATED.html
+*.exe
+override.json

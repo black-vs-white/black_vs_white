@@ -1,0 +1,6 @@
+[submodule "tools/Odin"]
+	path = tools/Odin
+	url = https://github.com/odin-lang/Odin
+[submodule "extern/sol"]
+	path = extern/sol
+	url = https://github.com/hardliner66/sol

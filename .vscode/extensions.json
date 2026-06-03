@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "yzhang.markdown-all-in-one",
+        "fcrespo82.markdown-table-formatter",
+        "danielgavin.ols",
+        "vadimcn.vscode-lldb",
+        "webfreak.debug",
+        "ms-vscode.cpptools"
+    ]
+}

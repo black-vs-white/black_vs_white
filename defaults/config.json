@@ -1,0 +1,303 @@
+{
+	"assets": {
+		"textures": {
+			"background": {
+				"path": "assets/background.png"
+			},
+			"enemy": {
+				"invert": true,
+				"offset_x": 0,
+				"offset_y": -4,
+				"path": "assets/imp.png"
+			},
+			"player1": {
+				"invert": true,
+				"offset_x": 0,
+				"offset_y": -6,
+				"path": "assets/wizzo.png"
+			},
+			"player2": {
+				"invert": false,
+				"offset_x": 0,
+				"offset_y": -6,
+				"path": "assets/wizzo.png"
+			}
+		}
+	},
+	"physics": {
+		"enemy": {
+			"bbox": {
+				"height": 13,
+				"offset_x": 6.5,
+				"offset_y": 6.5,
+				"width": 13
+			}
+		},
+		"player": {
+			"bbox": {
+				"height": 20,
+				"offset_x": 10,
+				"offset_y": 6,
+				"width": 12
+			}
+		},
+		"units": {
+			"size": 6.5,
+			"speed": 100
+		}
+	},
+	"balancing": {
+		"enemies_per_kill": 2,
+		"scaling": {
+			"enemy_hp": "enemy.base_hp * (1 + (total_kills / 20))",
+			"enemy_speed": "enemy.base_speed",
+			"enemy_xp": "enemy.base_xp"
+		},
+		"enemy": {
+			"dampening": 0.5,
+			"base_hp": 5,
+			"spawn_safe_zone": 40,
+			"base_speed": 0.3,
+			"touch_damage": 5,
+			"base_xp": 5
+		},
+		"max_enemies": 400,
+		"pickup": {
+			"follow_speed": 1.8,
+			"health_pack_chance": 0.05,
+			"radius": 5
+		},
+		"upgrades": {
+			"general": {
+				"chance_for_percent_upgrade": 0.5,
+				"percent": {
+					"min": 0.05,
+					"max": 0.15
+				},
+				"flat": {
+					"min": 1.0,
+					"max": 10.0
+				}
+			},
+			"per_type": {
+				"NewWeapon": {
+					"weight": 2
+				},
+				"MaxHP": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 5.0,
+						"max": 20.0
+					}
+				},
+				"MovementSpeed": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				},
+				"LowerCooldown": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				},
+				"MoreDamage": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				},
+				"BiggerSize": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				},
+				"PickupRange": {
+					"chance_for_percent_upgrade": 0.5,
+					"percent": {
+						"min": 0.05,
+						"max": 0.15
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				},
+				"XpGain": {
+					"chance_for_percent_upgrade": 1.0,
+					"percent": {
+						"min": 0.01,
+						"max": 0.05
+					},
+					"flat": {
+						"min": 1.0,
+						"max": 10.0
+					}
+				}
+			}
+		},
+		"player": {
+			"base_hp": 150,
+			"base_pickup_range": 6,
+			"iframes": 0.7,
+			"base_speed": 1,
+			"upgrade_count": 3,
+			"weapon_count": 5
+		},
+		"weapon_stats": {
+			"Projectile": {
+				"area": 1,
+				"cooldown": 1.2,
+				"damage": 10,
+				"speed": 1
+			},
+			"Zone": {
+				"area": 6,
+				"cooldown": 1.3,
+				"damage": 5,
+				"speed": 1
+			}
+		}
+	},
+	"debug": {
+		"enemy_freeze": false,
+		"enemy_god_mode": false,
+		"enemy_show_collision_boxes": false,
+		"entity_draw_positions": false,
+		"god_mode": false,
+		"player_show_collision_boxes": false,
+		"projectile_show_collision_boxes": false,
+		"render_grid": false,
+		"render_grid_text": false
+	},
+	"general": {
+		"log_level": {
+			"value": [
+				"Info",
+				"Error"
+			]
+		},
+		"zoom": 1
+	},
+	"graphics": {
+		"background": "background",
+		"enemy": {
+			"color": [
+				230,
+				41,
+				55,
+				255
+			],
+			"texture": "enemy"
+		},
+		"pickups": {
+			"exp_orb_color": [
+				255,
+				203,
+				0,
+				255
+			],
+			"health_pack_color": [
+				0,
+				228,
+				48,
+				255
+			]
+		},
+		"player": [
+			{
+				"texture": "player1"
+			},
+			{
+				"texture": "player2"
+			}
+		]
+	},
+	"init": {
+		"enemies": 10,
+		"weapons": [
+			"Projectile"
+		]
+	},
+	"performance": {
+		"collision_detection_iterations": {
+			"value": [
+				1,
+				3
+			]
+		},
+		"max_pickups": {
+			"value": [
+				5000,
+				10000
+			]
+		},
+		"max_projectiles": {
+			"value": [
+				5000,
+				10000
+			]
+		},
+		"max_upgrades": {
+			"value": [
+				500,
+				1000
+			]
+		}
+	},
+	"user_settings": {
+		"key_bindings": {
+			"player1": {
+				"down": "S",
+				"left": "A",
+				"pick_upgrade": [
+					"ONE",
+					"TWO",
+					"THREE",
+					"FOUR"
+				],
+				"right": "D",
+				"up": "W"
+			},
+			"player2": {
+				"down": "DOWN",
+				"left": "LEFT",
+				"pick_upgrade": [
+					"SEVEN",
+					"EIGHT",
+					"NINE",
+					"ZERO"
+				],
+				"right": "RIGHT",
+				"up": "UP"
+			}
+		}
+	},
+	"variables": {}
+}

@@ -1,0 +1,12 @@
+[package]
+name = "helper"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.97"
+clap = { version = "4.5.32", features = ["derive"] }
+markdown = "1.0.0-alpha.23"
+serde = { version = "1.0.219", features = ["derive"] }
+serde-value = "0.7.0"
+serde_yaml = "0.9.34"

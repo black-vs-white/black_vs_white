@@ -1,0 +1,6 @@
+File: assets/light_background.png
+Description: Background Texture
+Attribution: TRaK2 Texture set By Georges "TRaK" Grondin
+Link: https://opengameart.org/content/dirty-lighter-brown-concrete
+License: CC-BY-SA 3.0
+---

@@ -1,0 +1,21 @@
+Asset Licensing
+
+Unless otherwise stated, assets in this directory are:
+
+Copyright (c) 2026 Steve Biedermann
+
+Licensed under CC0.
+
+Exceptions:
+
+light_background.png
+    Licensed under CC-BY-SA 3.0.
+    See publish/ATTRIBUTIONS.txt.
+
+lilwizard.png
+    Distributed with permission from the original artist.
+    You may redistribute this file only as part of this project.
+    No permission is granted to use this file in other projects.
+
+The source code of this project is licensed separately.
+See the repository root LICENSE file.

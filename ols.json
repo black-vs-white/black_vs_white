@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DanielGavin/ols/master/misc/ols.schema.json",
+    "odin_command": "tools/Odin/odin.exe",
+    "profile": "default",
+    "profiles": [
+        {
+            "name": "default",
+            "checker_path": [
+                "src/main_desktop"
+            ]
+        }
+    ],
+    "collections": [
+        {
+            "name": "sol",
+            "path": "extern/sol"
+        }
+    ],
+    "enable_document_symbols": true,
+    "enable_hover": true,
+    "enable_snippets": true
+}

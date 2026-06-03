@@ -1,0 +1,155 @@
+package game
+
+import "core:mem"
+import rl "vendor:raylib"
+
+RUNTIME_ARENA_SIZE :: 1024 * 1024 * 1
+
+FPS: i32 : 60
+SECONDS_PER_FRAME: f32 : 1.0 / f32(FPS)
+
+when ODIN_DEBUG {
+	BUILD_MODE :: 0
+} else {
+	BUILD_MODE :: 1
+}
+
+WINDOW_TITLE :: cstring("ALPHA BUILD :: Black vs White")
+WINDOW_TITLE_DEBUG :: cstring("ALPHA BUILD :: Black vs White - Debug Mode")
+
+TEXT_ALPHA_BUILD :: cstring("ALPHA BUILD")
+TEXT_ALPHA_BUILD_FONT_SIZE :: 10
+
+TEXT_ALPHA :: cstring("ALPHA")
+TEXT_BUILD :: cstring("BUILD")
+TEXT_ALPHA_FONT_SIZE :: 20
+
+TEXT_GOD_MODE :: cstring("GOD MODE")
+
+TEXT_PAUSED :: cstring("PAUSED")
+
+MENU_FONT_SIZE: f32 : 30
+MENU_FONT_SPACING: f32 : 10
+MENU_PADDING :: 40
+
+GAME_OVER_SCREEN_FONT_SIZE: f32 : 40
+GAME_OVER_SCREEN_FONT_SPACING: f32 : 5
+
+BALANCE_BAR_HEIGHT: i32 : 20
+BALANCE_BAR_PADDING: i32 : 10
+
+HELP_TEXT_HEIGHT: i32 : 30
+
+PROGRESS_BAR_PADDING: i32 : 20
+PROGRESS_BAR_HEIGHT: i32 : 20
+
+TEXTURE_SIZE_BACKGROUND :: 512
+
+PLAYER_AREA_WIDTH :: f32(TEXTURE_SIZE_BACKGROUND * 3)
+PLAYER_AREA_HEIGHT :: f32(TEXTURE_SIZE_BACKGROUND * 3)
+
+ALLOW_CONFIG_OVERRIDE :: #config(ALLOW_CONFIG_OVERRIDE, ODIN_DEBUG)
+
+// Assert valid config
+ALLOWED_KEYS :: []rl.KeyboardKey {
+	.APOSTROPHE,
+	.COMMA,
+	.MINUS,
+	.PERIOD,
+	.SLASH,
+	.ZERO,
+	.ONE,
+	.TWO,
+	.THREE,
+	.FOUR,
+	.FIVE,
+	.SIX,
+	.SEVEN,
+	.EIGHT,
+	.NINE,
+	.SEMICOLON,
+	.EQUAL,
+	.A,
+	.B,
+	.C,
+	.D,
+	.E,
+	.F,
+	.G,
+	.H,
+	.I,
+	.J,
+	.K,
+	.L,
+	.M,
+	.N,
+	.O,
+	.P,
+	.Q,
+	.R,
+	.S,
+	.T,
+	.U,
+	.V,
+	.W,
+	.X,
+	.Y,
+	.Z,
+	.LEFT_BRACKET,
+	.BACKSLASH,
+	.RIGHT_BRACKET,
+	.GRAVE,
+	.SPACE,
+	.ENTER,
+	.TAB,
+	.BACKSPACE,
+	.INSERT,
+	.DELETE,
+	.RIGHT,
+	.LEFT,
+	.DOWN,
+	.UP,
+	.PAGE_UP,
+	.PAGE_DOWN,
+	.HOME,
+	.END,
+	.F1,
+	.F2,
+	.F3,
+	.F4,
+	.F5,
+	.F6,
+	.F7,
+	.F8,
+	.F9,
+	.F10,
+	.F11,
+	.F12,
+	.KP_0,
+	.KP_1,
+	.KP_2,
+	.KP_3,
+	.KP_4,
+	.KP_5,
+	.KP_6,
+	.KP_7,
+	.KP_8,
+	.KP_9,
+	.KP_DECIMAL,
+	.KP_DIVIDE,
+	.KP_MULTIPLY,
+	.KP_SUBTRACT,
+	.KP_ADD,
+	.KP_ENTER,
+	.KP_EQUAL,
+}
+
+when ODIN_OS == .JS {
+	MAIN_MENU_ITEMS :: 1
+	PAUSE_MENU_ITEMS :: 2
+} else {
+	MAIN_MENU_ITEMS :: 2
+	PAUSE_MENU_ITEMS :: 3
+}
+
+ALL_UPGRADE_WEAPONS :: []WeaponType{WeaponType.Zone}

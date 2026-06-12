@@ -12,6 +12,12 @@ but because of a shift in priorities I'm not working on this as actively as I sh
 Because of that and because I wanted to release the code some time after the steam release anyway,
 I decided to release the code ahead of time, in the hope that someone finds it useful.
 
+## Licensing
+
+The source code in this repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Assets are licensed separately. See [assets/LICENSE](assets/LICENSE) and [assets/ATTRIBUTIONS.txt](assets/ATTRIBUTIONS.txt) for asset-specific licensing and attribution information.
+
 ## Setup
 The project was set up so that it automatically downloads and builds the Odin compiler on windows.
 This was done to help keep the Odin version in sync between contributors.
